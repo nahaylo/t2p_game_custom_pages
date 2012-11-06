@@ -1,15 +1,15 @@
 T2pGameCustomPages::Application.routes.draw do
   root :to => 'home#index'
 
-  match 'login_from_game' => 'home#login_from_game', :as => :user_login_from_game
-  match 'register_from_game' => 'home#register_from_game', :as => :user_register_from_game
-  match 'register_wo_phone' => 'home#register_wo_phone', :as => :register_user
-  match 'restore' => 'home#restore', :as => :restore_user
+  match 'login_from_game' => 'games#login_from_game', :as => :user_login_from_game
+  match 'register_from_game' => 'games#register_from_game', :as => :user_register_from_game
+  match 'register_wo_phone' => 'games#register_wo_phone', :as => :register_user
+  match 'restore' => 'games#restore', :as => :restore_user
 
-  match 'login_from_game_error' => 'home#login_from_game_error', :as => :login_from_game_error
-  match 'register_from_game_error' => 'home#register_from_game_error', :as => :register_from_game_error
-  match 'register_wo_phone_error' => 'home#register_wo_phone_error', :as => :register_wo_phone_error
-  match 'restore_error' => 'home#restore_error', :as => :restore_error
+  match 'login_from_game_error' => 'games#login_from_game_error', :as => :login_from_game_error
+  match 'register_from_game_error' => 'games#register_from_game_error', :as => :register_from_game_error
+  match 'register_wo_phone_error' => 'games#register_wo_phone_error', :as => :register_wo_phone_error
+  match 'restore_error' => 'games#restore_error', :as => :restore_error
 
 
   # The priority is based upon order of creation:
