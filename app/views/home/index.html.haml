@@ -1,0 +1,13 @@
+%h2 Страницы
+%ul
+  %li= link_to 'Вход на портал', t2p_login_path
+  %li= link_to 'Регистрация аккаунта через телефон', t2p_register_by_phone_path
+  %li= link_to 'Регистрация аккаунта без телефона ', t2p_register_wo_phone_path
+  %li= link_to 'Восстановление аккаунта', t2p_restore_path
+
+%h2 Страницы с ошибками
+%ul
+  %li= link_to 'Вход на портал', login_from_game_error_path
+  %li= link_to 'Регистрация аккаунта через телефон', register_from_game_error_path
+  %li= link_to 'Регистрация аккаунта без телефона ', register_wo_phone_error_path
+  %li= link_to 'Восстановление аккаунта', restore_error_path

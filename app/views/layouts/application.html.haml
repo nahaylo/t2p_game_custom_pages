@@ -1,0 +1,22 @@
+!!! XML
+!!! Mobile 1.0
+%html{html_attrs(lang = I18n.locale)}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title= 'game name'
+    = stylesheet_link_tag "games/#{GAME}", :media => "all"
+
+  %body
+    #page
+      = t2p_widget_header
+
+      %header
+        = image_tag("games/game_name/logo.png", :alt => 'Game name')
+
+      = t2p_notice
+      = t2p_error
+
+      #content
+        = yield
+
+      = t2p_widget_footer
